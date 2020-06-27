@@ -30,7 +30,7 @@ class character:
     def display(self,name):
 
         if self.hp<100 and self.mp<10:
-            print(bcolors.OKBLUE,name,bcolors.ENDC,"-",bcolors.OKGREEN,"HP",bcolors.ENDC,":","[",bcolors.red,self.hp,bcolors.ENDC,"/",self.max_hp,"]\t\t",bcolors.FAIL,"MP",bcolors.ENDC,":","[",bcolors.red,self.mp,bcolors.ENDC,"/",self.max_mp,"]")
+            print(bcolors.OKBLUE,name,bcolors.ENDC,"-",bcolors.OKGREEN,"HP",bcolors.ENDC,":","[",bcolors.red,self.hp,bcolors.ENDC,"/",self.max_hp,"]",bcolors.FAIL,"MP",bcolors.ENDC,":","[",bcolors.red,self.mp,bcolors.ENDC,"/",self.max_mp,"]")
             return 1
         elif self.hp<100:
             print(bcolors.OKBLUE,name,bcolors.ENDC ,"-", bcolors.OKGREEN,"HP" ,bcolors.ENDC, ":" , "[",bcolors.red, self.hp,bcolors.ENDC, "/", self.max_hp, "]",bcolors.FAIL ,"MP" ,bcolors.ENDC, ":", "[", self.mp, "/", self.max_mp, "]")
@@ -151,7 +151,7 @@ class character:
                 return b
             elif (g == str(5)):
                 a = w[1]["heal"]*2
-                b = w[0]["cost"]
+                b = w[1]["cost"]
                 print(bcolors.OKGREEN, "Your health is increased by", bcolors.ENDC, a)
 
                 return b
@@ -197,7 +197,7 @@ class character:
                 return b
             elif (g == str(5)):
                  a = w[1]["heal"]
-                 b = w[0]["cost"]
+                 b = w[1]["cost"]
                  print(bcolors.OKGREEN,"Your health is increased by",bcolors.ENDC, a)
 
                  return b

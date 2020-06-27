@@ -1,4 +1,4 @@
-from rpgfile import character,bcolors
+from classes import character,bcolors
 import re
 import random
 import colorama
@@ -10,8 +10,8 @@ res=True
 z=1
 p=0
 darkmagic=[{"name":"Fire","damage":100,"cost":10},
-      {"name":"Thunder","damage":90,"cost":9},
-      {"name":"Earthquake","damage":80,"cost":8},
+      {"name":"Thunder","damage":90,"cost":7},
+      {"name":"Earthquake","damage":80,"cost":5},
       ]
 whitemagic=[{"name":"Healing potion","heal":100,"cost":10},
       {"name":"Recovery spell","heal":150,"cost":15},
