@@ -1,6 +1,10 @@
 from rpgfile import character,bcolors
 import re
 import random
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
+
 result=True
 res=True
 z=1
