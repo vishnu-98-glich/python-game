@@ -19,7 +19,8 @@ action=["Attack","Magic"]
 player=character(320,40,90,40,darkmagic,whitemagic)
 enemy=character(900,40,70,40,darkmagic,whitemagic)
 e="target"
-print(bcolors.red+"Welcome to Wizblitzz!!"+bcolors.ENDC)
+print(bcolors.red+"Welcome to Wizblitzz!!\n"+bcolors.ENDC)
+print("This is a short description about the game.The HP and MP represents health and magic points respectively. At a particular scenario you magic will deal double damage and your attack damage will be reduced to half.Beware! The enemy's power will also be affected in the same scenario.But this effect will not be good for you! ")
 while res:
       t=input("Enter your name ")
       t=re.sub("[0-9,:.' ']","",t)
@@ -104,6 +105,13 @@ while result:
             character.mpcheck(enemy,str(s),darkmagic,whitemagic)
             w=character.magicattack(player, darkmagic, whitemagic,str(s), str(1))
             character.reducemp(enemy,w)
+            y = character.get_hp(player)
+            if y<=0:
+                  character.set_hp(player)
+                  character.display(player, t)
+                  character.display(enemy, e)
+                  print("you have lost.you died")
+                  break
 
       else:
             dam = character.generate_dmge(enemy)
