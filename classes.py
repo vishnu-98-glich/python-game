@@ -102,13 +102,13 @@ class character:
                 return 1
 
         if (g == str(4)):
-            b = d[0]["cost"]
+            b = w[0]["cost"]
             if self.mp < b:
                 print(bcolors.red, "Low power to perform magic", bcolors.ENDC)
                 return 1
 
         if (g == str(5)):
-            b = d[1]["cost"]
+            b = w[1]["cost"]
             if self.mp < b:
                 print(bcolors.red, "Low power to perform magic", bcolors.ENDC)
                 return 1
